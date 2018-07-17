@@ -394,7 +394,7 @@ html {
 
 body {
     font-family: @myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
-
+    .mapazero;
 }
 
 .sr-only {
@@ -562,20 +562,27 @@ body.layout {
         .zero;
         .relative;
 
-        video {
+        div.video {
             .absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            -ms-transform: translateX(-50%) translateY(-50%);
-            -moz-transform: translateX(-50%) translateY(-50%);
-            -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-            background-size: cover; 
+            .full-position;
+            .hidden;
+
+            video {
+                .absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -100;
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+                background-size: cover; 
+            }
+    
         }
 
 
@@ -955,6 +962,7 @@ body.layout {
                         .center;
                         padding:20px 0;
                         background:#f4f4f4;
+                        height:108px;
 
                         i {
                             .block;
@@ -1031,8 +1039,10 @@ body.layout {
             div.dashboard {
                 div.grid-line {
                     margin-bottom:20px;
+                    white-space:nowrap;
                     div.grid {
                         .inline-block;
+                        white-space:normal;
                         background:@white;
                         padding:20px;
                         font-size:14px;
