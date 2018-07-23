@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
-    $("#main-menu>ul>li>a").hover(function(){
-        $("#main-menu>ul>li>a").removeClass("active");
+    $("#main-menu").hover(function(){
         $(this).addClass("active");
     });
 
 
     $("#main-menu").on("mouseleave", function(){
-        $("#main-menu>ul>li>a").removeClass("active");
+        $(this).removeClass("active");
     });
 
 
@@ -32,11 +31,11 @@ $(document).ready(function() {
 
         if (sheight > 138) {
 
-            $("#header").addClass("fix");
+            $(".layout.sub #header").addClass("fix");
 
             } else {
 
-                $("#header").removeClass("fix");
+                $(".layout.sub #header").removeClass("fix");
             }
     });
 
