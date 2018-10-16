@@ -990,7 +990,7 @@ body.layout {
                         padding:20px;
                         font-size:14px;
                         border-radius:10px;
-                        height:390px;
+                        min-height:300px;
                         .drop-shadow();
                         margin:0 5px;
                         .center;
@@ -1020,19 +1020,73 @@ body.layout {
                             .left;
                             .relative;
                             font-size:18px;
-                            margin:0 0 10px;
+                            margin:-10px 0 10px;
                             border-bottom:1px solid #eee;
-                            padding:0 0 10px;
+                            height:48px;
+                            line-height:47px;
 
-                            a {
+                            a.more {
                                 .zero;
-                                .absolute;
-                                right:0;
                                 color:#999;
 
                                 i {
                                     font-size:18px;
                                 }
+                            }
+
+                            fieldset.tools {
+                                line-height:1;
+                                .mapazero;
+                                border:none;
+                                .absolute;
+                                right:0;
+                                top:0;
+                                font-size:14px;
+
+                                input,
+                                button {
+                                    border:1px solid #ccc;
+                                    border-radius:5px;
+                                    line-height:36px;
+                                    padding:0 5px;
+                                }
+
+                                input {
+                                }
+
+                                button {
+                                    background:#f4f4f4;
+
+                                    &.submit {
+                                        border:1px solid #333;
+                                        background:#555;
+                                        color:#fff;
+                                    }
+
+                                    i {
+                                        margin-right:4px;
+
+                                        &.icon-file-pdf {
+                                            color:red;
+                                        }
+
+                                        &.icon-doc-text {
+                                            color:#0075bc;
+                                        }
+                                    }
+                                }
+
+                                div {
+                                    .inline-block;
+                                }
+
+                                u {
+                                    text-decoration:none;
+                                    line-height:36px;
+                                    padding:0 5px;
+                                }
+
+
                             }
                         }
 
