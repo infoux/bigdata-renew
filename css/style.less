@@ -570,7 +570,7 @@ body.layout {
             left:0;
             top:0;
             width:100px;
-            height:50px;
+            height:100px;
             line-height:50px;
             z-index:1000;
             .inline-block;
@@ -601,8 +601,8 @@ body.layout {
 
 
                 small {
-                    .none;
-                    margin:6px 10px 0 0;
+                    .block;
+                    margin:16px auto 0;
                     .zero;
                     width:70px;
                     height:28px;
@@ -635,6 +635,7 @@ body.layout {
                         .top;
                         height:48px;
                         padding:0 50px 0 0;
+                        color:#fff;
 
                         a {
                             color:#fff;
@@ -734,6 +735,7 @@ body.layout {
 
             nav#main-menu {
                 .relative;
+                margin-left:100px;
                 z-index:900;
                 background:#222;
                 max-height:50px;
@@ -750,15 +752,6 @@ body.layout {
                     top:50px;
                     bottom:0;
                     background:#222;
-                }
-
-                &.active {
-                    max-height:1000px;
-                    .absolute;
-                    left:0;
-                    right:0;
-                    .ani();
-                    .drop-shadow();
                 }
                 
                 &>ul {
@@ -785,6 +778,7 @@ body.layout {
                         }
 
                         &.home {
+                            .none;
                             &>a {
                                 width:100px;
                                 background:#111;
@@ -822,6 +816,15 @@ body.layout {
                     }
                 }
 
+
+                &.active {
+                    max-height:1000px;
+                    .absolute;
+                    left:0;
+                    right:0;
+                    .ani();
+                    .drop-shadow();
+                }
                 button {
                     .none;
                 }
@@ -871,8 +874,12 @@ body.layout {
                 right:0;
                 left:0;
                 top:0;
-                padding-left:200px;
+                padding-left:100px;
                 background:#222;
+
+                li.home {
+                    .inline-block;
+                }
 
 
             }
