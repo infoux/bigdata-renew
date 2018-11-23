@@ -427,44 +427,40 @@ body {
 /* style */
 
 body.cmslogin {
-    background:url("../images/login-bg.jpg") no-repeat center / cover;
+    background:url("../images/login_bg.jpg") no-repeat center / cover;
     .flex;
     .absolute;
     .full-position;
 
     fieldset {
-        border-color:#fff;
+        border: none;
+        border-radius: 15px;
         width:520px;
-        height:560px;
-        background:rgba(0,0,0,0.4);
+        height:540px;
+        box-shadow: 0.25px 0.25px 20px rgba(0,0,0,.2);
         .flex;
         flex-direction:column;
-
-
-
-
-
-
+        background: rgba(0, 0, 0, 0.05);
 
         h1 {
-
             .inline-block;
             .mapazero;
             .center;
-            color:@white;
+            color: #0c2738;
             width:100%;
-            font-size:36px;
-            margin:0 0 40px;
+            font-size: 46px;
+            margin:80px 0 40px;
+            font-weight: 600;
 
             &::before {
                 content:"";
                 .block;
                 .zero;
-                background:url("../images/logo.svg") no-repeat center / 100% auto;
+                background:url("../images/logo2.svg") no-repeat center / 80% auto;
                 width:180px;
                 height:72px;
-                margin:60px auto 20px;
-                .opacity(0.6);
+                margin:40px auto 10px;
+                
             }
 
         }
@@ -476,31 +472,39 @@ body.cmslogin {
         input {
             .block;
             width:346px;
-            height:70px;
+            height:60px;
             line-height:70px;
-            border-radius:8px;
+            border-radius:5px;
             border:none;
             margin:0 auto 4px;
-            background:#171a21;
-            .inner-shadow(0,2px, 3px, 3px, 1);
-            .center;
+            background:#3d6884;
+            .inner-shadow(0,1px, 0.5px, 0.5px, 0.5);
+            padding: 0 0 0 20px;
             font-size:16px;
             color:#fff;
+
+            &::placeholder {
+                color: #fff;
+                opacity: 0.5;
+                font-size: 18px;
+                font-weight: 200;
+            }
         }
 
         button {
             width:346px;
-            line-height:70px;
+            line-height:60px;
             border:none;
-            border-radius:8px;
+            border-radius:5px;
             margin:0 auto;
-            .gradient(#167c95, #136f86, #116277);
+            .gradient(#138bc9, #117dc1, #0f6db9);
             border-top:1px solid #fff;
             color:#fff;
-            font-size:16px;
+            font-size:22px;
             margin-top:10px;
-            .bold;
-            .inner-shadow(0,-2px, 1px, 1px, 0.4);
+            .normal;
+            .pointer;
+            .inner-shadow(0,-1px, 1px, 1px, 0.4);
         }
     }
 }
@@ -1248,4 +1252,70 @@ body.layout {
 
     }
 
+}
+
+body.error_page {
+    background: #f3f4f3;
+    .flex;
+    .absolute;
+    .full-position;
+
+    #content {
+        width: 100%;
+
+        div.icon {
+            .center;
+            
+            
+            i {
+                font-size: 50px;
+                color: #b9b9b9;
+
+                &.icon-icon01 {
+                    color: #0073bd;
+                }
+            }
+        }
+
+        h1 {
+            font-size: 46px;
+            .center;
+        }
+
+        h3 {
+            .center;
+            font-size: 18px;
+            line-height: 30px;
+            margin: 0;
+        }
+
+        h5 {
+            margin: 30px 0 15px 0;
+            .center;
+
+            &:before {
+                content:"";
+                .inline-block;
+                .zero;
+                background:url("../images/logo2.png") no-repeat center / 100% auto;
+                width:280px;
+                height:72px;
+                margin: 0 auto 0;
+            }
+        }
+
+        button {
+            .block;
+            width: 300px;
+            height: 60px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 5px;
+            .gradient(#138bc9, #117cc1, #0f6db9);
+            color: @white;
+            font-size: 18px;
+            .inner-shadow(0,-1px, 1px, 1px, 0.2);
+            .pointer;
+        }
+    }
 }
