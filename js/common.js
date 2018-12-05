@@ -26,18 +26,28 @@ $(document).ready(function() {
     });
 
 
-    $(window).scroll(function() {
-        var sheight = $(document).scrollTop();
+    $("section.intro ul.links>li").on("mouseenter", function(){
+        $(this).addClass("open");
+    }); 
 
-        if (sheight > 138) {
 
-            $(".layout.sub #header").addClass("fix");
+    $("section.intro ul.links>li").on("mouseleave", function(){
+        $(this).removeClass("open");
+    }); 
 
-            } else {
 
-                $(".layout.sub #header").removeClass("fix");
-            }
-    });
+    // $(window).scroll(function() {
+    //     var sheight = $(document).scrollTop();
+
+    //     if (sheight > 138) {
+
+    //         $(".layout.sub #header").addClass("fix");
+
+    //         } else {
+
+    //             $(".layout.sub #header").removeClass("fix");
+    //         }
+    // });
 
 });
 
