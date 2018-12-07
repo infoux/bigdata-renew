@@ -509,10 +509,13 @@ body.cmslogin {
 
 body.intro {
 
+    background:#000;
+
     div.video {
         .fixed;
         .full-position;
         .hidden;
+        .opacity(0.8);
 
         video {
             .block;
@@ -546,7 +549,7 @@ body.intro {
                 h1 {
                     .center;
                     font-size:44px;
-                    color:#111;
+                    color:#fff;
 
                     small {
                         .block;
@@ -593,7 +596,7 @@ body.intro {
 
                 p.attention {
                     font-size:24px;
-                    color:#222;
+                    color:#fff;
                     margin:40px 0 60px;
                 }
 
@@ -651,6 +654,32 @@ body.intro {
                             .normal;  
                             .opacity(0.98);
                             .ani();
+
+                            a {
+                                .relative;
+                                padding-right:0;
+                                .ani();
+                                i {
+                                    .absolute;
+                                    .inline-block;
+                                    right:0;
+                                    top:-2px;
+                                    .none;
+                                    width:0;
+                                    .hidden;
+                                    font-size:20px;
+                                    .ani();
+                                }
+                                &:hover {
+                                    padding-right:30px;
+                                    .ani();
+                                    i {
+                                        .inline-block;
+                                        width:30px;
+                                        .ani();
+                                    }
+                                }
+                            }
                         }
 
                         ul {
