@@ -1006,14 +1006,20 @@ body.layout {
                 }
             }
 
-            button.all-menu {
+            div.util {
+                .inline-block;
                 .absolute;
                 z-index:1100;
                 right:10px;
-                bottom:8px;
+                top:8px;
+            }
+            button.all-menu,
+            a.util {
+                display:inline-block;
                 background:none;
                 border:1px solid rgba(255,255,255,0.4);
                 padding:7px 20px;
+                margin-right:4px;
                 border-radius:12px;
                 .pointer;
                 font-size:17px;
@@ -1394,6 +1400,15 @@ body.layout {
                             margin-right:4px;
                         }
         
+                    }
+
+                    &.sitemap {
+                        right:155px;
+                    }
+
+                    &.mstr {
+
+                        right:0;
                     }
                 }
 
