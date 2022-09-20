@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-    $("#main-menu").hover(function(){
-        $(this).addClass("active");
+    $("#main-menu>ul>li>a").hover(function(){
+        $(this).parent().addClass("active");
     });
 
 
-    $("#main-menu").on("mouseleave", function(){
+    $("#main-menu>ul>li").on("mouseleave", function(){
         $(this).removeClass("active");
     });
 
