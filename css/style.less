@@ -1373,6 +1373,42 @@ body.layout {
                             }
                         }
 
+
+                    }
+
+                    p {
+                        display:none;
+                        position:absolute;
+                        margin:0;
+                        left:75px;
+                        top:50%;
+                        width:280px;
+                        z-index:1000;
+                        background:rgba(0,0,0,.9);
+                        border-radius:10px;
+                        padding:20px;
+                        color:#fff;
+                        transform:translateY(-50%);
+                        word-break:keep-all;
+                        .drop-shadow (@x:0, @y: 10px, @blur: 26px, @spread: 0, @alpha: 0.6);
+                        border-bottom:2px solid #000;
+
+                        &::before {
+                            content:"";
+                            display:block;
+                            position:absolute;
+                            width:0;
+                            height:0;
+                            border:10px solid transparent;
+                            border-right-color:rgba(0,0,0,.9);
+                            left:-20px;
+                            top:50%;
+                            transform:translateY(-50%);
+                        }
+                    }
+
+                    a:hover + p {
+                        display:block;
                     }
 
 
